@@ -1,0 +1,31 @@
+# --- secrets (keep .env.example only) ---
+.env
+
+# --- datasets & runtime data ---
+data/raw/*
+!data/raw/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.db
+
+# --- research papers & generated media ---
+*.docx
+*.pdf
+paper_assets/
+reference/
+*.mp4
+*.webm
+brag-output/
+
+# --- downloaded model weights (auto-fetched by ultralytics) ---
+yolov8*.pt
+
+# --- build & cache junk ---
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

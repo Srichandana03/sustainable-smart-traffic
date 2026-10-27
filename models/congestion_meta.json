@@ -1,0 +1,141 @@
+{
+  "labels": [
+    "Low",
+    "Moderate",
+    "High"
+  ],
+  "features": [
+    "car_count",
+    "bike_count",
+    "bus_count",
+    "truck_count",
+    "total",
+    "heavy_ratio",
+    "two_wheeler_ratio",
+    "hour",
+    "hour_sin",
+    "hour_cos",
+    "is_weekend",
+    "is_peak"
+  ],
+  "metrics": {
+    "accuracy": 0.9991603694374476,
+    "precision_macro": 0.9988998899889988,
+    "recall_macro": 0.9995383194829178,
+    "f1_macro": 0.9992180355816719,
+    "confusion_matrix": [
+      [
+        167,
+        0,
+        0
+      ],
+      [
+        0,
+        721,
+        1
+      ],
+      [
+        0,
+        0,
+        302
+      ]
+    ],
+    "n_train": 4761,
+    "n_test": 1191,
+    "per_class": {
+      "Low": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 167.0
+      },
+      "Moderate": {
+        "precision": 1.0,
+        "recall": 0.9986149584487535,
+        "f1-score": 0.9993069993069993,
+        "support": 722.0
+      },
+      "High": {
+        "precision": 0.9966996699669967,
+        "recall": 1.0,
+        "f1-score": 0.9983471074380166,
+        "support": 302.0
+      },
+      "accuracy": 0.9991603694374476,
+      "macro avg": {
+        "precision": 0.9988998899889988,
+        "recall": 0.9995383194829178,
+        "f1-score": 0.9992180355816719,
+        "support": 1191.0
+      },
+      "weighted avg": {
+        "precision": 0.9991631404954097,
+        "recall": 0.9991603694374476,
+        "f1-score": 0.9991607724147226,
+        "support": 1191.0
+      }
+    },
+    "feature_importance": {
+      "car_count": 0.20825378596782684,
+      "bike_count": 0.018130991607904434,
+      "bus_count": 0.15064077079296112,
+      "truck_count": 0.23739412426948547,
+      "total": 0.20824529230594635,
+      "heavy_ratio": 0.08098366111516953,
+      "two_wheeler_ratio": 0.004525782540440559,
+      "hour": 0.013791723176836967,
+      "hour_sin": 0.008546875789761543,
+      "hour_cos": 0.06367556750774384,
+      "is_weekend": 0.0012591409031301737,
+      "is_peak": 0.004552383907139301
+    }
+  },
+  "baseline_metrics": {
+    "accuracy": 0.5163727959697733,
+    "precision_macro": 0.5212649751769556,
+    "recall_macro": 0.5790052592801959,
+    "f1_macro": 0.5099449978921762,
+    "confusion_matrix": [
+      [
+        81,
+        86,
+        0
+      ],
+      [
+        328,
+        268,
+        126
+      ],
+      [
+        0,
+        36,
+        266
+      ]
+    ],
+    "method": "vehicle-count thresholds (terciles of total)",
+    "thresholds_on_total": [
+      77.0,
+      134.0
+    ]
+  },
+  "majority_class_accuracy": 0.6062132661628883,
+  "comparison": {
+    "before": {
+      "name": "Rule-based (vehicle count)",
+      "accuracy": 0.5163727959697733,
+      "precision_macro": 0.5212649751769556,
+      "recall_macro": 0.5790052592801959,
+      "f1_macro": 0.5099449978921762
+    },
+    "after": {
+      "name": "XGBoost (12 features)",
+      "accuracy": 0.9991603694374476,
+      "precision_macro": 0.9988998899889988,
+      "recall_macro": 0.9995383194829178,
+      "f1_macro": 0.9992180355816719
+    },
+    "majority_class_accuracy": 0.6062132661628883,
+    "accuracy_gain": 0.4828,
+    "f1_macro_gain": 0.4893
+  }
+}
